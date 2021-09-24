@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar mail con PHP</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3"></div>
+
+            <div class="col-md-6">
+                <h1>Envio de Formulario PHP</h1>
+
+                <h2>Enviar un formulario con PHP</h2>
+            
+                <form action="procesar_datos.php" method="POST">
+                    <label>Nombres</label>
+                    <input type="text" name="nombres" class="form-control">
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" class="form-control"></textarea>
+                    <br >
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            
+                <br />
+
+                <h2>Enviar un formulario y archivo con PHP</h2>
+
+                <form action="procesar_datos_archivo.php" method="POST" enctype="multipart/form-data">
+                    <label>Nombres</label>
+                    <input type="text" name="nombres" class="form-control">
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" class="form-control"></textarea>
+                    <label>Archivo a subir</label>
+                    <input type="file" name="archivo">
+                    <br >
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            
+                <br />
+
+                <h2>Enviar un formulario con JavaScript (jQuery)</h2>
+            
+                <form id="form_jquery" action="">
+                    <label>Nombres</label>
+                    <input type="text" name="nombres" class="form-control">
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" class="form-control"></textarea>
+                    <br >
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+
+                <h2>Enviar un formulario y archivo con JavaScript (jQuery)</h2>
+            
+                <form id="form_archivo_jquery" action="">
+                    <label>Nombres</label>
+                    <input type="text" name="nombres" class="form-control">
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" class="form-control"></textarea>
+                    <label>Archivo a subir</label>
+                    <input type="file" name="archivo">
+                    <br >
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+
+                <h2>Enviar un formulario con JavaScript sin libreria extra</h2>
+            
+                <form id="form_js" action="">
+                    <label>Nombres</label>
+                    <input type="text" name="nombres" class="form-control">
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" class="form-control"></textarea>
+                    <br >
+                    <button id="btnSend" type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+
+                <h2>Enviar un formulario y archivo con JavaScript sin libreria extra</h2>
+            
+                <form id="form_archivo_js" action="">
+                    <label>Nombres</label>
+                    <input type="text" name="nombres" class="form-control">
+                    <label>Mensaje</label>
+                    <textarea name="mensaje" class="form-control"></textarea>
+                    <label>Archivo a subir</label>
+                    <input type="file" name="archivo">
+                    <br >
+                    <button id="btnSendFile" type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script_jquery.js"></script>
+    <script src="js/script_vanilla.js"></script>
+</body>
+</html>
